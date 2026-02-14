@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Game</title>
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser-arcade-physics.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #333333;
+            overflow: hidden;
+            flex-direction: column;
+        }
+        #game-container {
+            border: 5px solid #333333;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+        .ui-container {
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #2ecc71;
+        }
+        .game-wrapper {
+            position: relative;
+        }
+        .player-input {
+            position: absolute;
+            width: 100px;
+            padding: 5px;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: 1px solid #555;
+            border-radius: 4px;
+            text-align: center;
+            font-size: 14px;
+        }
+        #p1-input { bottom: 10px; left: 50%; transform: translateX(-50%); }
+        #p2-input { top: 10px; left: 50%; transform: translateX(-50%); }
+        #p3-input { top: 50%; left: 0px; transform: translateY(-50%); }
+        #p4-input { top: 50%; right: 0px; transform: translateY(-50%); }
+    </style>
+</head>
+<body>
+    <div class="game-wrapper">
+        <input type="text" id="p1-input" class="player-input" placeholder="Player 1">
+        <input type="text" id="p2-input" class="player-input" placeholder="Player 2">
+        <input type="text" id="p3-input" class="player-input" placeholder="Player 3">
+        <input type="text" id="p4-input" class="player-input" placeholder="Player 4">
+        <div id="game-container"></div>
+    </div>
+    <div class="ui-container">
+        <button id="deal-button">Ván Mới</button>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
