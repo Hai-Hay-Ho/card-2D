@@ -4,6 +4,10 @@ const config = {
     height: 600,
     parent: 'game-container',
     backgroundColor: '#333333',
+    scale: {
+        mode: Phaser.Scale.FIT,
+        autoCenter: Phaser.Scale.CENTER_BOTH
+    },
     scene: {
         preload: preload,
         create: create
